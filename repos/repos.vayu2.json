@@ -1,0 +1,45 @@
+[
+  {
+    "kernelSource": {
+      "name": "AvariceXC_Vayu",
+      "repo": "https://github.com/bianca2190/platform_kernel_xiaomi_vayu",
+      "branch": "staging/13.0",
+      "device": "vayu",
+      "defconfig": "vayu_defconfig"
+    },
+    "withKernelSU": true,
+    "toolchains": [
+      {
+        "url": "https://github.com/ZyCromerZ/Clang/releases/download/17.0.0-20230718-release/Clang-17.0.0-20230718.tar.gz",
+        "name": "zyc-clang",
+        "binPath": ["./bin"]
+      }
+    ],
+    "ccache": false,
+    "params": {
+      "ARCH": "arm64",
+      "CC": "zyc-clang/bin/clang",
+      "externalCommand": {
+        "CROSS_COMPILE": "zyc-clang/bin/aarch64-linux-gnu-",
+        "CROSS_COMPILE_COMPAT": "zyc-clang/bin/arm-linux-gnueabi-",
+        "LD": "zyc-clang/bin/ld.lld",
+        "AR": "zyc-clang/bin/llvm-ar",
+        "NM": "zyc-clang/bin/llvm-nm",
+        "OBJCOPY": "zyc-clang/bin/llvm-objcopy",
+        "OBJDUMP": "zyc-clang/bin/llvm-objdump",
+        "READELF": "zyc-clang/bin/llvm-readelf",
+        "OBJSIZE": "zyc-clang/bin/llvm-size",
+        "STRIP": "zyc-clang/bin/llvm-strip",
+        "LDGOLD": "zyc-clang/bin/aarch64-linux-gnu-ld.gold",
+        "LLVM_AR": "zyc-clang/bin/llvm-ar",
+        "LLVM_DIS": "zyc-clang/bin/llvm-dis"
+      }
+    },
+    "AnyKernel3": {
+      "use": true,
+      "release": true,
+      "repo": "https://github.com/elizabethangelalorenza/AnyKernel3/",
+      "branch": "vayu"
+    }
+  }
+]
