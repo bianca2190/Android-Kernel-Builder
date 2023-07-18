@@ -21,7 +21,7 @@
       "CC": "zyc-clang/bin/clang",
       "externalCommand": {
         "CROSS_COMPILE": "zyc-clang/bin/aarch64-linux-gnu-",
-        "CROSS_COMPILE_ARM32": "zyc-clang/bin/arm-linux-gnueabi-",
+        "CROSS_COMPILE_COMPAT": "zyc-clang/bin/arm-linux-gnueabi-",
         "LD": "zyc-clang/bin/ld.lld",
         "AR": "zyc-clang/bin/llvm-ar",
         "NM": "zyc-clang/bin/llvm-nm",
