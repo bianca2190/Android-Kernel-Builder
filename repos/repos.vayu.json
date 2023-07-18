@@ -1,9 +1,9 @@
 [
   {
     "kernelSource": {
-      "name": "AvariceX_Vayu",
-      "repo": "https://github.com/Avarice12/platform_kernel_xiaomi_vayu",
-      "branch": "13.0",
+      "name": "EvolutionX_Vayu",
+      "repo": "https://github.com/elizabethangelalorenza/kernel_xiaomi_vayu",
+      "branch": "tiramisu",
       "device": "vayu",
       "defconfig": "vayu_defconfig"
     },
