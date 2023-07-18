@@ -3,7 +3,7 @@
     "kernelSource": {
       "name": "EvolutionX_Vayu",
       "repo": "https://github.com/bianca2190/kernel_xiaomi_vayu",
-      "branch": "staging",
+      "branch": "tiramisu",
       "device": "vayu",
       "defconfig": "vayu_defconfig"
     },
