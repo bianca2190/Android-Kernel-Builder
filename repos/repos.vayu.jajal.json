@@ -24,7 +24,7 @@
         "CROSS_COMPILE_ARM32": "zyc-clang/arm-linux-gnueabi-",
         "LD": "zyc-clang/bin/ld.lld",
         "LLVM": "zyc-clang/bin/",
-        "LLVM_IAS": "zyc-clang/bin/"
+        "LLVM_IAS": "zyc-clang/bin/",
         "AR": "zyc-clang/bin/llvm-ar",
         "NM": "zyc-clang/bin/llvm-nm",
         "OBJCOPY": "zyc-clang/bin/llvm-objcopy",
