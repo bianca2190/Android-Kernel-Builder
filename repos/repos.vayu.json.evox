@@ -10,7 +10,7 @@
     "withKernelSU": true,
     "toolchains": [
       {
-        "url": "https://github.com/ZyCromerZ/Clang/releases/download/17.0.0-20230718-release/Clang-17.0.0-20230718.tar.gz",
+        "url": "https://github.com/ZyCromerZ/Clang/releases/download/17.0.0-20230719-release/Clang-17.0.0-20230719.tar.gz",
         "name": "zyc-clang",
         "binPath": ["./bin"]
       }
@@ -30,7 +30,7 @@
     "AnyKernel3": {
       "use": true,
       "release": true,
-      "repo": "https://github.com/elizabethangelalorenza/AnyKernel3/",
+      "repo": "https://github.com/bianca2190/AnyKernel3/",
       "branch": "vayu"
     }
   }
