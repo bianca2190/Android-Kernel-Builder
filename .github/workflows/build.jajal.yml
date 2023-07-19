@@ -1,4 +1,4 @@
-name: "Build kernels by MKV"
+name: Build kernels by MKV (JAJAL)"
 
 env:
   OUT_DIR: "${{ github.workspace }}/out"
@@ -207,7 +207,7 @@ jobs:
           args: ${{ steps.generate-args.outputs.args }}
           arch: ${{ steps.generate-args.outputs.ARCH }}
         run: |
-          export PATH="/home/runner/work/Android-Kernel-Builder/Android-Kernel-Builder/zyc-clang/bin:$PATH"
+          export PATH="/home/runner/work/Android-Kernel-Builder/Android-Kernel-Builder/neutron-clang/bin:$PATH"
           echo "PATH Variable: $PATH"
           make ${{ env.args }} ${{ env.DEFCONFIG_NAME }}
 
@@ -216,7 +216,7 @@ jobs:
         env:
           args: ${{ steps.generate-args.outputs.args }}
         run: |
-          export PATH="/home/runner/work/Android-Kernel-Builder/Android-Kernel-Builder/zyc-clang/bin:$PATH"
+          export PATH="/home/runner/work/Android-Kernel-Builder/Android-Kernel-Builder/neutron-clang/bin:$PATH"
           echo "PATH Variable: $PATH"
           make ${{ env.args }}
 
