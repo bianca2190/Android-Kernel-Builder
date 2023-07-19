@@ -207,7 +207,6 @@ jobs:
           args: ${{ steps.generate-args.outputs.args }}
           arch: ${{ steps.generate-args.outputs.ARCH }}
         run: |
-          export PATH="/home/runner/work/Android-Kernel-Builder/Android-Kernel-Builder/neutron-clang/bin:$PATH"
           echo "PATH Variable: $PATH"
           make ${{ env.args }} ${{ env.DEFCONFIG_NAME }}
 
@@ -216,7 +215,6 @@ jobs:
         env:
           args: ${{ steps.generate-args.outputs.args }}
         run: |
-          export PATH="/home/runner/work/Android-Kernel-Builder/Android-Kernel-Builder/neutron-clang/bin:$PATH"
           echo "PATH Variable: $PATH"
           make ${{ env.args }}
 
