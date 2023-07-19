@@ -10,22 +10,22 @@
     "withKernelSU": true,
     "toolchains": [
       {
-    "repo": "https://gitlab.com/LeCmnGend/proton-clang",
-    "branch": "clang-16",
-    "name": "neutron-clang",
+    "repo": "https://gitlab.com/AnggaR96s/clang-gengkapak",
+    "branch": "main",
+    "name": "gengkapak-clang",
     "binPath": ["bin"]
       }
     ],
     "ccache": false,
     "params": {
       "ARCH": "arm64",
-      "CC": "AvariceXC_Vayu/toolchains/neutron-clang/bin/clang",
+      "CC": "gengkapak-clang/bin/clang",
       "externalCommand": {
-        "CROSS_COMPILE": "AvariceXC_Vayu/toolchains/neutron-clang/aarch64-linux-gnu-",
-        "CROSS_COMPILE_ARM32": "AvariceXC_Vayu/toolchains/neutron-clang/bin/arm-linux-gnueabi-",
-        "LD": "AvariceXC_Vayu/toolchains/neutron-clang/bin/ld.lld",
-        "LLVM": "AvariceXC_Vayu/toolchains/neutron-clang/bin/",
-        "LLVM_IAS": "AvariceXC_Vayu/toolchains/neutron-clang/bin/"
+        "CROSS_COMPILE": "gengkapak-clang/aarch64-linux-gnu-",
+        "CROSS_COMPILE_ARM32": "gengkapak-clang/bin/arm-linux-gnueabi-",
+        "LD": "gengkapak-clang/bin/ld.lld",
+        "LLVM": "gengkapak-clang/bin/",
+        "LLVM_IAS": "gengkapak-clang/bin/"
       }
     },
     "AnyKernel3": {
