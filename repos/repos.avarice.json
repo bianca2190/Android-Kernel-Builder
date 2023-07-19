@@ -1,0 +1,37 @@
+[
+  {
+    "kernelSource": {
+      "name": "AvariceXC_Vayu",
+      "repo": "https://github.com/bianca2190/platform_kernel_xiaomi_vayu",
+      "branch": "staging/13.0",
+      "device": "vayu",
+      "defconfig": "vayu_defconfig"
+    },
+    "withKernelSU": true,
+    "toolchains": [
+      {
+        "url": "https://github.com/ZyCromerZ/Clang/releases/download/17.0.0-20230719-release/Clang-17.0.0-20230719.tar.gz",
+        "name": "zyc-clang",
+        "binPath": ["./bin"]
+      }
+    ],
+    "ccache": false,
+    "params": {
+      "ARCH": "arm64",
+      "CC": "zyc-clang/bin/clang",
+      "externalCommand": {
+        "CROSS_COMPILE": "zyc-clang/aarch64-linux-gnu-",
+        "CROSS_COMPILE_ARM32": "zyc-clang/arm-linux-gnueabi-",
+        "LD": "zyc-clang/bin/ld.lld",
+        "LLVM": "zyc-clang/bin/",
+        "LLVM_IAS": "zyc-clang/bin/"
+      }
+    },
+    "AnyKernel3": {
+      "use": true,
+      "release": true,
+      "repo": "https://github.com/bianca2190/AnyKernel3/",
+      "branch": "vayu"
+    }
+  }
+]
