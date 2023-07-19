@@ -18,13 +18,13 @@
     "ccache": false,
     "params": {
       "ARCH": "arm64",
-      "CC": "zyc-clang/bin/clang",
+      "CC": "neu-clang/bin/clang",
       "externalCommand": {
-        "CROSS_COMPILE": "zyc-clang/aarch64-linux-gnu-",
-        "CROSS_COMPILE_ARM32": "zyc-clang/arm-linux-gnueabi-",
-        "LD": "zyc-clang/bin/ld.lld",
-        "LLVM": "zyc-clang/bin/",
-        "LLVM_IAS": "zyc-clang/bin/"
+        "CROSS_COMPILE": "neu/aarch64-linux-gnu-",
+        "CROSS_COMPILE_ARM32": "neu-clang/arm-linux-gnueabi-",
+        "LD": "neu-clang/bin/ld.lld",
+        "LLVM": "neu-clang/bin/",
+        "LLVM_IAS": "neu-clang/bin/"
       }
     },
     "AnyKernel3": {
