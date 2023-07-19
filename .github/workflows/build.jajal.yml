@@ -207,14 +207,6 @@ jobs:
           args: ${{ steps.generate-args.outputs.args }}
           arch: ${{ steps.generate-args.outputs.ARCH }}
         run: |
-          mkdir -p "toolchains/neutron-clang"
-          cd "toolchains/neutron-clang"
-          sudo apt install zstd
-          wget https://github.com/Neutron-Toolchains/clang-build-catalogue/releases/download/11032023/neutron-clang-11032023.tar.zst -O neutron-clang.tar.zst
-          tar --use-compress-program=unzstd -xvf neutron-clang.tar.zst
-          cd ..
-          cd ..
-          export PATH="/home/runner/work/Android-Kernel-Builder/Android-Kernel-Builder/AvariceXC_Vayu/toolchains/neutron-clang/bin:$PATH"
           echo "PATH Variable: $PATH"
           make ${{ env.args }} ${{ env.DEFCONFIG_NAME }}
 
@@ -223,7 +215,6 @@ jobs:
         env:
           args: ${{ steps.generate-args.outputs.args }}
         run: |
-          export PATH="/home/runner/work/Android-Kernel-Builder/Android-Kernel-Builder/AvariceXC_Vayu/toolchains/neutron-clang/bin:$PATH"
           echo "PATH Variable: $PATH"
           make ${{ env.args }}
 
