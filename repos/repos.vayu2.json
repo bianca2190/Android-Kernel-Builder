@@ -14,7 +14,7 @@
     "branch": "Neutron-16",
     "name": "neutron-clang",
     "binPath": ["bin"]
-      },
+      }
     ],
     "ccache": false,
     "params": {
