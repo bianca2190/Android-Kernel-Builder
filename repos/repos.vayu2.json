@@ -10,21 +10,22 @@
     "withKernelSU": true,
     "toolchains": [
       {
-        "url": "https://github.com/ZyCromerZ/Clang/releases/download/17.0.0-20230718-release/Clang-17.0.0-20230718.tar.gz",
-        "name": "zyc-clang",
-        "binPath": ["./bin"]
-      }
+    "repo": "https://gitlab.com/kslsdsdlkf/neutron-clang",
+    "branch": "Neutron-16",
+    "name": "neutron-clang",
+    "binPath": ["bin"]
+      },
     ],
     "ccache": false,
     "params": {
       "ARCH": "arm64",
-      "CC": "zyc-clang/bin/clang",
+      "CC": "neutron-clang/bin/clang",
       "externalCommand": {
-        "CROSS_COMPILE": "zyc-clang/aarch64-linux-gnu-",
-        "CROSS_COMPILE_ARM32": "zyc-clang/arm-linux-gnueabi-",
-        "LD": "zyc-clang/bin/ld.lld",
-        "LLVM": "zyc-clang/bin/",
-        "LLVM_IAS": "zyc-clang/bin/"
+        "CROSS_COMPILE": "neutron-clang/aarch64-linux-gnu-",
+        "CROSS_COMPILE_ARM32": "neutron-clang/arm-linux-gnueabi-",
+        "LD": "neutron-clang/bin/ld.lld",
+        "LLVM": "neutron-clang/bin/",
+        "LLVM_IAS": "neutron-clang/bin/"
       }
     },
     "AnyKernel3": {
