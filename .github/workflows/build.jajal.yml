@@ -210,6 +210,8 @@ jobs:
           mkdir -p "toolchains/neutron-clang"
           cd "toolchains/neutron-clang"
           bash <(curl -s "https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman") -S
+          cd ..
+          cd ..
           export PATH="$PWD/toolchains/neutron-clang/bin:$PATH"
           echo "PATH Variable: $PATH"
           make ${{ env.args }} ${{ env.DEFCONFIG_NAME }}
