@@ -19,13 +19,13 @@
     "ccache": false,
     "params": {
       "ARCH": "arm64",
-      "CC": "$HOME/toolchains/neutron-clang/bin/clang",
+      "CC": "toolchains/neutron-clang/bin/clang",
       "externalCommand": {
-        "CROSS_COMPILE": "$HOME/toolchains/neutron-clang/aarch64-linux-gnu-",
-        "CROSS_COMPILE_ARM32": "$HOME/toolchains/neutron-clang/bin/arm-linux-gnueabi-",
-        "LD": "$HOME/toolchains/neutron-clang/bin/ld.lld",
-        "LLVM": "$HOME/toolchains/neutron-clang/bin/",
-        "LLVM_IAS": "$HOME/toolchains/neutron-clang/bin/"
+        "CROSS_COMPILE": "toolchains/neutron-clang/aarch64-linux-gnu-",
+        "CROSS_COMPILE_ARM32": "toolchains/neutron-clang/bin/arm-linux-gnueabi-",
+        "LD": "toolchains/neutron-clang/bin/ld.lld",
+        "LLVM": "toolchains/neutron-clang/bin/",
+        "LLVM_IAS": "toolchains/neutron-clang/bin/"
       }
     },
     "AnyKernel3": {
