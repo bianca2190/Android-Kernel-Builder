@@ -207,6 +207,7 @@ jobs:
           args: ${{ steps.generate-args.outputs.args }}
           arch: ${{ steps.generate-args.outputs.ARCH }}
         run: |
+          export PATH="/home/runner/work/Android-Kernel-Builder/Android-Kernel-Builder/zyc-clang/bin:$PATH"
           echo "PATH Variable: $PATH"
           make ${{ env.args }} ${{ env.DEFCONFIG_NAME }}
 
@@ -215,6 +216,7 @@ jobs:
         env:
           args: ${{ steps.generate-args.outputs.args }}
         run: |
+          export PATH="/home/runner/work/Android-Kernel-Builder/Android-Kernel-Builder/zyc-clang/bin:$PATH"
           echo "PATH Variable: $PATH"
           make ${{ env.args }}
 
@@ -244,7 +246,7 @@ jobs:
           arch: ${{ steps.generate-args.outputs.ARCH }}
         with:
           name: dtb-${{ env.KERNEL_DEVICE }}-${{ env.KERNEL_NAME }}-${{ env.builddate }}
-          path: ${{ env.OUT_DIR }}/arch/${{ env.arch }}/boot/dtb
+          path: ${{ env.OUT_DIR }}/arch/${{ env.arch }}/boot/dtb.img
           if-no-files-found: ignore
           retention-days: 7
 
