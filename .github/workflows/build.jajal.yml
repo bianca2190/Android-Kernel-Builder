@@ -129,7 +129,7 @@ jobs:
                   tar zxvf "$filename" -C $toolchain_name
                   ;;
                 *.tar.zst)
-                  tar --use-compress-program=unzstd zxvf "$filename" -C $toolchain_name
+                  tar --use-compress-program=unzstd -xvf "$filename" -C $toolchain_name
                   ;;
                 *.rar)
                   unrar x "$filename" $toolchain_name
