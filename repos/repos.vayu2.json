@@ -21,8 +21,8 @@
       "ARCH": "arm64",
       "CC": "neutron-clang/bin/clang",
       "externalCommand": {
-        "CROSS_COMPILE": "neutron-clang/aarch64-linux-gnu-",
-        "CROSS_COMPILE_ARM32": "neutron-clang/arm-linux-gnueabi-",
+        "CROSS_COMPILE": "aarch64-linux-gnu-",
+        "CROSS_COMPILE_ARM32": "arm-linux-gnueabi-",
         "LD": "neutron-clang/bin/ld.lld",
         "LLVM": "neutron-clang/bin/",
         "LLVM_IAS": "neutron-clang/bin/"
