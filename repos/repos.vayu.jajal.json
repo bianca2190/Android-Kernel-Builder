@@ -24,17 +24,7 @@
         "CROSS_COMPILE_ARM32": "zyc-clang/arm-linux-gnueabi-",
         "LD": "zyc-clang/bin/ld.lld",
         "LLVM": "zyc-clang/bin/",
-        "LLVM_IAS": "zyc-clang/bin/",
-        "AR": "zyc-clang/bin/llvm-ar",
-        "NM": "zyc-clang/bin/llvm-nm",
-        "OBJCOPY": "zyc-clang/bin/llvm-objcopy",
-        "OBJDUMP": "zyc-clang/bin/llvm-objdump",
-        "READELF": "zyc-clang/bin/llvm-readelf",
-        "OBJSIZE": "zyc-clang/bin/llvm-size",
-        "STRIP": "zyc-clang/bin/llvm-strip",
-        "LDGOLD": "zyc-clang/bin/aarch64-linux-gnu-ld.gold",
-        "LLVM_AR": "zyc-clang/bin/llvm-ar",
-        "LLVM_DIS": "zyc-clang/bin/llvm-dis"
+        "LLVM_IAS": "zyc-clang/bin/"
       }
     },
     "AnyKernel3": {
