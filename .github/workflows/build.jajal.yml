@@ -209,7 +209,8 @@ jobs:
         run: |
           mkdir -p "toolchains/neutron-clang"
           cd "toolchains/neutron-clang"
-          bash <(curl -s "https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman") -S
+          curl -LO --insecure "https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman"
+          ./antman -S
           cd ..
           cd ..
           export PATH="/home/runner/work/Android-Kernel-Builder/Android-Kernel-Builder/toolchains/neutron-clang/bin:$PATH"
