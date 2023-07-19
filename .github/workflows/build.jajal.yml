@@ -207,6 +207,12 @@ jobs:
           args: ${{ steps.generate-args.outputs.args }}
           arch: ${{ steps.generate-args.outputs.ARCH }}
         run: |
+          mkdir -p neu-clang
+          cd neu-clang
+          sudo apt install zstd -y
+          wget https://github.com/Neutron-Toolchains/clang-build-catalogue/releases/download/11032023/neutron-clang-11032023.tar.zst -O neu-clang.tar.zst 
+          tar --use-compress-program=unzstd -xvf neu-clang.tar.zst
+          cd ..
           echo "PATH Variable: $PATH"
           make ${{ env.args }} ${{ env.DEFCONFIG_NAME }}
 
