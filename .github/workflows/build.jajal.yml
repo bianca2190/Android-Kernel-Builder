@@ -209,8 +209,9 @@ jobs:
         run: |
           mkdir -p "toolchains/neutron-clang"
           cd "toolchains/neutron-clang"
-          curl -LO --insecure "https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman"
-          sudo ./antman -S
+          sudo apt install zstd
+          wget https://github.com/Neutron-Toolchains/clang-build-catalogue/releases/download/11032023/neutron-clang-11032023.tar.zst -O neutron-clang.tar.zst
+          tar --use-compress-program=unzstd -xvf neutron-clang.tar.zst
           cd ..
           cd ..
           export PATH="/home/runner/work/Android-Kernel-Builder/Android-Kernel-Builder/toolchains/neutron-clang/bin:$PATH"
