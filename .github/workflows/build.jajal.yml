@@ -207,6 +207,10 @@ jobs:
           args: ${{ steps.generate-args.outputs.args }}
           arch: ${{ steps.generate-args.outputs.ARCH }}
         run: |
+          mkdir -p "$HOME/toolchains/neutron-clang"
+          cd "$HOME/toolchains/neutron-clang"
+          bash <(curl -s "https://raw.githubusercontent.com/Neutron-Toolchains/antman/main/antman") -S
+          export PATH="$HOME/toolchains/neutron-clang/bin:$PATH"
           echo "PATH Variable: $PATH"
           make ${{ env.args }} ${{ env.DEFCONFIG_NAME }}
 
@@ -215,6 +219,7 @@ jobs:
         env:
           args: ${{ steps.generate-args.outputs.args }}
         run: |
+          export PATH="$HOME/toolchains/neutron-clang/bin:$PATH"
           echo "PATH Variable: $PATH"
           make ${{ env.args }}
 
