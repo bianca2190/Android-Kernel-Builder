@@ -10,8 +10,8 @@
     "withKernelSU": true,
     "toolchains": [
       {
-    "repo": "https://gitlab.com/kslsdsdlkf/neutron-clang",
-    "branch": "Neutron-16",
+    "repo": "https://gitlab.com/LeCmnGend/proton-clang",
+    "branch": "clang-16",
     "name": "neutron-clang",
     "binPath": ["bin"]
       }
