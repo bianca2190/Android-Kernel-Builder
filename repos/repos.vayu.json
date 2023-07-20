@@ -10,21 +10,22 @@
     "withKernelSU": true,
     "toolchains": [
       {
-        "url": "https://github.com/Neutron-Toolchains/clang-build-catalogue/releases/download/11032023/neutron-clang-11032023.tar.zst",
-        "name": "neu-clang",
+        "repo": "https://gitlab.com/LeCmnGend/proton-clang",
+        "branch": "clang-16",
+        "name": "custom-clang",
         "binPath": ["./bin"]
       }
     ],
     "ccache": false,
     "params": {
       "ARCH": "arm64",
-      "CC": "neu-clang/bin/clang",
+      "CC": "custom-clang/bin/clang",
       "externalCommand": {
-        "CROSS_COMPILE": "neu/aarch64-linux-gnu-",
-        "CROSS_COMPILE_ARM32": "neu-clang/arm-linux-gnueabi-",
-        "LD": "neu-clang/bin/ld.lld",
-        "LLVM": "neu-clang/bin/",
-        "LLVM_IAS": "neu-clang/bin/"
+        "CROSS_COMPILE": "custom/aarch64-linux-gnu-",
+        "CROSS_COMPILE_ARM32": "custom-clang/arm-linux-gnueabi-",
+        "LD": "custom-clang/bin/ld.lld",
+        "LLVM": "custom-clang/bin/",
+        "LLVM_IAS": "custom-clang/bin/"
       }
     },
     "AnyKernel3": {
