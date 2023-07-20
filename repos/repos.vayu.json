@@ -12,6 +12,11 @@
       {
         "repo": "https://gitlab.com/LeCmnGend/proton-clang",
         "branch": "clang-16",
+        "name": "proton-clang",
+        "binPath": ["./bin"]
+      },
+      {
+        "url": "https://github.com/Neutron-Toolchains/clang-build-catalogue/releases/download/11032023/neutron-clang-11032023.tar.zst",
         "name": "custom-clang",
         "binPath": ["./bin"]
       }
