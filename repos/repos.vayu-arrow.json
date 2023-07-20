@@ -26,7 +26,7 @@
       "ARCH": "arm64",
       "CC": "custom-clang/bin/clang",
       "externalCommand": {
-        "CROSS_COMPILE": "custom/aarch64-linux-gnu-",
+        "CROSS_COMPILE": "custom-clang/aarch64-linux-gnu-",
         "CROSS_COMPILE_ARM32": "custom-clang/arm-linux-gnueabi-",
         "LLVM": "custom-clang/bin/",
         "LLVM_IAS": "custom-clang/bin/",
