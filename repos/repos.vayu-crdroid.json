@@ -1,0 +1,53 @@
+[
+  {
+    "kernelSource": {
+      "name": "Crdroid_Vayu",
+      "repo": "https://github.com/bianca2190/android_kernel_xiaomi_sm8150",
+      "branch": "13.0-test",
+      "device": "vayu",
+      "defconfig": "vayu_user_defconfig"
+    },
+    "withKernelSU": false,
+    "toolchains": [
+      {
+        "repo": "https://gitlab.com/LeCmnGend/proton-clang",
+        "branch": "clang-16",
+        "name": "proton-clang",
+        "binPath": ["./bin"]
+      },
+      {
+        "url": "https://github.com/ZyCromerZ/Clang/releases/download/17.0.0-20230718-release/Clang-17.0.0-20230718.tar.gz",
+        "name": "custom-clang",
+        "binPath": ["./bin"]
+      }
+    ],
+    "ccache": true,
+    "params": {
+      "ARCH": "arm64",
+      "CC": "custom-clang/bin/clang",
+      "externalCommand": {
+        "CROSS_COMPILE": "custom/aarch64-linux-gnu-",
+        "CROSS_COMPILE_ARM32": "custom-clang/arm-linux-gnueabi-",
+        "LLVM": "custom-clang/bin/",
+        "LLVM_IAS": "custom-clang/bin/",
+        "LD": "custom-clang/bin/ld.lld",
+        "AR": "custom-clang/bin/llvm-ar",
+        "NM": "custom-clang/bin/llvm-nm",
+        "OBJCOPY": "custom-clang/bin/llvm-objcopy",
+        "OBJDUMP": "custom-clang/bin/llvm-objdump",
+        "READELF": "custom-clang/bin/llvm-readelf",
+        "OBJSIZE": "custom-clang/bin/llvm-size",
+        "STRIP": "custom-clang/bin/llvm-strip",
+        "LDGOLD": "custom-clang/bin/aarch64-linux-gnu-ld.gold",
+        "LLVM_AR": "custom-clang/bin/llvm-ar",
+        "LLVM_DIS": "custom-clang/bin/llvm-dis"
+      }
+    },
+    "AnyKernel3": {
+      "use": true,
+      "release": true,
+      "repo": "https://github.com/bianca2190/AnyKernel3/",
+      "branch": "vayu"
+    }
+  }
+]
